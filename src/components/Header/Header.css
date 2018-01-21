@@ -1,0 +1,28 @@
+header {
+    background-color: #ff424f;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    flex-basis: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #f83745;
+}
+
+.logo-container a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.logo-container img {
+    max-height: 40px;
+}
+
+.search-container {
+    flex: 1;
+}

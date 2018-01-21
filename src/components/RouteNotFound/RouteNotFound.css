@@ -1,0 +1,27 @@
+.not-found-container {
+    width: 50%;
+    margin: auto;
+    border: 1px solid #ff424f;
+}
+
+.not-found-container .not-found-text {
+    font-size: 30px;
+    color: #fff;
+    background-color: #ff424f;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.not-found-container .page-does-not-exists {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.not-found-container a {
+    background-color: #ff424f;
+    padding: 5px 15px;
+    display: block;
+    max-width: 40%;
+    margin: 10px auto;
+}

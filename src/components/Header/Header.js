@@ -11,7 +11,7 @@ const Header = props => (
             </Link>
         </div>
         <div className="search-container">
-        
+            
         </div>
     </header>
 )
