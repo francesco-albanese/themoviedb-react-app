@@ -10,6 +10,10 @@ This project consists of a responsive react web application which consumes [Them
 - Navigate to specific movie to display more details
 - Fully responsive
 
+## Design
+
+- inspired by [Movie Application UI Details](https://dribbble.com/shots/2786747-Movie-Application-UI-Details)
+
 ## Dependencies
 
 - axios to fetch APIs
