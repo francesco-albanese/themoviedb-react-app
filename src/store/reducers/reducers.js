@@ -42,19 +42,41 @@ const moviesListReducer = (state = moviesListInitialState, action) => {
                 ...state,
                 error: action.error
             }
+        case actionTypes.FETCH_BY_GENRE:
+            return {
+                ...state,
+                movies: action.filteredMovies,
+                error: null
+            }
         default:
             return state
     }
 }
 
 const allGenresInitialState = {
-    genres: [],
-    error: null
+    genres: []
+}
+
+const mutateGenres = genres => {
+    const mutatedGenres = [...genres]
+    const allGenresId = {id: "All", name: "All Genres"}
+    mutatedGenres.unshift(allGenresId)
+    return mutatedGenres
 }
 
 const allGenresReducer = (state = allGenresInitialState, action) => {
     switch(action.type) {
-
+        case actionTypes.FETCH_ALL_GENRES:
+            const mutatedGenres = mutateGenres(action.genres)
+            return {
+                ...state,
+                genres: mutatedGenres
+            }
+        case actionTypes.FETCH_ALL_GENRES_FAILS:
+            return {
+                ...state,
+                genres: action.genres
+            }
         default:
             return state
     }

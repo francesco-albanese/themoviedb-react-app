@@ -29,7 +29,7 @@ class MoviesList extends Component {
             content = (
                 <Auxiliary>
                     <div className="genrefilter-container">
-                        <GenreFilter />
+                        <GenreFilter changed={genreId => this.props.onFetchByGenre(genreId)}/>
                     </div>
                     <div className="movies-list-container">
                         { moviesList.map(movie => (
@@ -59,7 +59,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        onFetchMovies: () => dispatch(actionCreators.fetchMovies())
+        onFetchMovies: () => dispatch(actionCreators.fetchMovies()),
+        onFetchByGenre: genreId => dispatch(actionCreators.fetchByGenre(genreId))
     }
 }
 

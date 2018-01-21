@@ -7,3 +7,8 @@
 - Whilst developing Searchbar component I added <Link> component to handle clicks to 'movies/:id' route so the use will be able to click on each result to display further details about the film. 'movies/:id' route does not have a component to render yet, I will take care of it later.
 
 - In MoviesList component I noticed that I had wrapped the innermost content inside a div with no reason whatsoever, therefore I decided to create a utility component named Auxiliary which returns only props.children. This will allow me to not wrap content inside unnecessary divs
+
+- With regards to GenreFilter component, I thought about two different approaches to filter by genre:
+    1) retrieve all genres ids and names from TMDB Api to populate the select, then onChange would fire a function which hits TMDB endpoints to search movies by specific genres and assign new movies array to MoviesListReducer
+    2) retrieve all genres ids and names from API to populate the select and onChange will fire a function which goes through state.moviesListReducer.movies and would filter them according to the id passed (obviously in an immutable way)
+    I decided to go for the first approach to get more results each time the user filters by favourite genre.

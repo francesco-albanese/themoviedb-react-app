@@ -45,3 +45,43 @@ export const fetchMovies = () => {
             .catch(error => dispatch(fetchMoviesFailed(error)))
     }
 }
+
+export const getAllGenres = genres => {
+    return {
+        type: actionTypes.FETCH_ALL_GENRES,
+        genres
+    }
+}
+
+export const getAllGenresFails = () => {
+    return {
+        type: actionTypes.FETCH_ALL_GENRES_FAILS,
+        genres: []
+    }
+}
+
+export const fetchAllGenres = () => {
+    return dispatch => {
+        axios.get(constants.TMDB_GENRES_LIST)
+            .then(res => dispatch(getAllGenres(res.data.genres)))
+            .catch(error => dispatch(getAllGenresFails()))
+    }
+}
+
+export const filteredByGenre = filteredMovies => {
+    return {
+        type: actionTypes.FETCH_BY_GENRE,
+        filteredMovies
+    }
+}
+
+export const fetchByGenre = genreId => {
+    if (genreId === "All") {
+        return fetchMovies()
+    }
+
+    return dispatch => {
+        axios.get(constants.TMDB_FILTER_BY_GENRE_URL + genreId)
+            .then(res => dispatch(filteredByGenre(res.data.results)))
+    }
+}
