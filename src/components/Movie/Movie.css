@@ -1,0 +1,29 @@
+.movie {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    height: 450px;
+    flex-basis: 25%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.movie a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.movie .vote {
+    position: absolute;
+    background-color:  #ffb10a;
+    color: #fff;
+    bottom: -10px;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+}

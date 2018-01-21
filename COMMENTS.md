@@ -2,7 +2,7 @@
 
 - after creating the folder structure to accommodate for redux state management I focused on building the header component with Searchbar sub component
 
-- I decided to add styles to component whilst developing them
+- I decided to add styles to component whilst developing them to save some time for the final responsive tests I am planning to execute
 
 - Whilst developing Searchbar component I added <Link> component to handle clicks to 'movies/:id' route so the use will be able to click on each result to display further details about the film. 'movies/:id' route does not have a component to render yet, I will take care of it later.
 

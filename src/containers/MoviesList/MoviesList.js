@@ -4,6 +4,7 @@ import GlobalSpinner from '../../components/GlobalSpinner/GlobalSpinner'
 import * as actionCreators from '../../store/actions/actionCreators'
 import './MoviesList.css'
 import Auxiliary from '../../components/Auxiliary/Auxiliary'
+import Movie from '../../components/Movie/Movie'
 
 class MoviesList extends Component {
 
