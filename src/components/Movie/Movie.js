@@ -8,7 +8,7 @@ const Movie = props => {
     return (
         <div className="movie">
             <Link to={'/movie/' + props.id}>
-                <img src={src}/>
+                <img src={src} alt={props.title}/>
                 <div className="vote">
                     {props.vote_average}
                 </div>

@@ -62,7 +62,6 @@ class Searchbar extends Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state)
     return {
         movies: state.movieByQueryReducer.movies,
         error: state.movieByQueryReducer.error

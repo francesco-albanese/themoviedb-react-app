@@ -87,7 +87,7 @@ const movieDetailsInitialState = {
     error: null
 }
 
-const movieDetailsReducer = (state = movieDetailsReducer, action) => {
+const movieDetailsReducer = (state = movieDetailsInitialState, action) => {
     switch(action.type) {
         case actionTypes.FETCH_MOVIE:
             return {
@@ -98,7 +98,6 @@ const movieDetailsReducer = (state = movieDetailsReducer, action) => {
         case actionTypes.FETCH_MOVIE_FAILS:
             return {
                 ...state,
-                movie: {},
                 error: action.error
             }
         default:

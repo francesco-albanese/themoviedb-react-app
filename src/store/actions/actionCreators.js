@@ -85,3 +85,25 @@ export const fetchByGenre = genreId => {
             .then(res => dispatch(filteredByGenre(res.data.results)))
     }
 }
+
+export const getMovie = movie => {
+    return {
+        type: actionTypes.FETCH_MOVIE,
+        movie
+    }
+}
+
+export const getMovieFails = error => {
+    return {
+        type: actionTypes.FETCH_MOVIE_FAILS,
+        error
+    }
+}
+
+export const fetchMovie = id => {
+    return dispatch => {
+        axios.get(constants.TMDB_MOVIE_URL + id + '?api_key=' + constants.API_KEY + '&language=en-US')
+            .then(res => dispatch(getMovie(res.data)))
+            .catch(error => dispatch(getMovieFails(error)))
+    }
+}
