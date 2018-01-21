@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import * as actionCreators from '../../store/actions/actionCreators'
 import Auxiliary from '../../components/Auxiliary/Auxiliary'
+import './GenreFilter.css'
 
 class GenreFilter extends Component {
 

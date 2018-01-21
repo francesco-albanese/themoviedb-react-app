@@ -1,3 +1,17 @@
 .genre-filter-container {
-    
+    padding: 10px;
+    background-color: #f83745;
+    border-radius: 4px;
+    border: 1px solid #fff;
+}
+
+.genre-filter-container span {
+    color: #fff;
+    margin-right: 5px;
+}
+
+.genre-filter-container select {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid  #b41822;
 }
