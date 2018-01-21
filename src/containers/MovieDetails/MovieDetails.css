@@ -1,0 +1,42 @@
+.movies-details-error {
+    width: 50%;
+    margin: auto;
+    color: #fff;
+    background-color: #ff424f;
+    padding: 7px;
+}
+
+.movie-container {
+    background-color: #ff424f;
+    max-width: 50%;
+    margin: auto;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.movie-datails-container {
+    padding: 20px;
+}
+
+.movie-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #222b32;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 5px;
+}
+
+.movie-backdrop img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, .7)
+}
+
+.genres-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
