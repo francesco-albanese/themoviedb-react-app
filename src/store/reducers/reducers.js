@@ -82,11 +82,36 @@ const allGenresReducer = (state = allGenresInitialState, action) => {
     }
 }
 
+const movieDetailsInitialState = {
+    movie: {},
+    error: null
+}
+
+const movieDetailsReducer = (state = movieDetailsReducer, action) => {
+    switch(action.type) {
+        case actionTypes.FETCH_MOVIE:
+            return {
+                ...state,
+                movie: action.movie,
+                error: null
+            }
+        case actionTypes.FETCH_MOVIE_FAILS:
+            return {
+                ...state,
+                movie: {},
+                error: action.error
+            }
+        default:
+            return state
+    }
+}
+
 
 const reducers = combineReducers({
     movieByQueryReducer,
     moviesListReducer,
-    allGenresReducer
+    allGenresReducer,
+    movieDetailsReducer
 })
 
 export default reducers 

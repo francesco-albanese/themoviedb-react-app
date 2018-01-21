@@ -12,3 +12,5 @@
     1) retrieve all genres ids and names from TMDB Api to populate the select, then onChange would fire a function which hits TMDB endpoints to search movies by specific genres and assign new movies array to MoviesListReducer
     2) retrieve all genres ids and names from API to populate the select and onChange will fire a function which goes through state.moviesListReducer.movies and would filter them according to the id passed (obviously in an immutable way)
     I decided to go for the first approach to get more results each time the user filters by favourite genre.
+
+- I opted for axios to handle asynchrounous request instead of window.fetch for better cross-browser compatibility, although I could have included a polyfill

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import './Searchbar.css'
 import * as actionCreators from '../../store/actions/actionCreators'
 import MovieResult from '../../components/MovieResult/MovieResult'
+import ReactDOM from 'react-dom'
 
 class Searchbar extends Component {
     query = "";
@@ -10,6 +11,11 @@ class Searchbar extends Component {
     handleKeyUp = event => {
         this.query = event.target.value
         this.props.onFetchByQuery(this.query)
+    }
+
+    handleClick = () => {
+        ReactDOM.findDOMNode(this.refs.input).value = "";
+        ReactDOM.findDOMNode(this.refs.resultsContainer).classList.remove('visible')
     }
 
     render() {
@@ -27,7 +33,7 @@ class Searchbar extends Component {
 
         if (movies.length) {
             result = movies.map(movie => {
-                return <MovieResult key={movie.id} {...movie} />
+                return <MovieResult key={movie.id} {...movie} clicked={this.handleClick} />
             })
         }  
         
@@ -43,9 +49,9 @@ class Searchbar extends Component {
             <div className="search-movies-container">
                 <label>
                     <span>Search for movies by title</span>
-                    <input placeholder="Please insert query" onKeyUp={this.handleKeyUp} type="text"/>
+                    <input placeholder="Please insert query" ref="input" onKeyUp={this.handleKeyUp} type="text"/>
                 </label>
-                <div className={resultsContainerClasses.join(' ')}>
+                <div ref="resultsContainer" className={resultsContainerClasses.join(' ')}>
                     <div className="content">
                         {result}
                     </div>
