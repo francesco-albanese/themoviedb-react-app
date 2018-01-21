@@ -60,4 +60,24 @@
 .search-movies-container .results-container.visible .content {
     overflow: auto;
     width: 100%;
+    z-index: 1;
+    background-color: #ff424f;
+}
+
+@media screen and (max-width: 550px) {
+
+    .search-movies-container {
+        margin-left: 10px;
+    }
+
+    .search-movies-container label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-movies-container label span {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
 }

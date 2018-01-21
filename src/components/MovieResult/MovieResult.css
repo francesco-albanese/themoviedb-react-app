@@ -1,14 +1,19 @@
 .movie-result-container {
     width: 100%;
     color: #000;
-    border-bottom: 1px solid #f83745;
-    padding: 2px;
+    border-bottom: 1px solid #fff;
+    padding: 4px;
     display: flex;
 }
 
+.movie-result-container:hover {
+    transition: background-color .1s ease-in-out;
+    background-color: #b8c3cc;
+}
+
 .movie-result-container img {
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
     margin-right: 5px;
 }
 
@@ -16,12 +21,13 @@
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100px;
-    font-size: 11px;
+    font-size: 15px;
     white-space: nowrap;
+    margin-top: 15px;
 }
 
 .movie-result-container a {
     display: flex;
     width: 100%;
-    color: #000;
+    color: #fff;
 }

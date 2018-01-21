@@ -38,7 +38,7 @@ class Moviedetails extends Component {
 
             content = (
                 <div className="movie-container">
-                    <div className="movie-title"><span>{movie.title + ' ' + year}</span><span>{movie.vote_average}</span></div>
+                    <div className="movie-title"><span>{movie.title + ' ' + year}</span></div>
                     <div className="movie-datails-container">
                         <div className="movie-backdrop">
                             <img src={src} alt={movie.title}/>
@@ -51,11 +51,18 @@ class Moviedetails extends Component {
                             <span>Original Title: {movie.original_title}</span>
                         </div>
                         <div className="movie-overview">
-                            {movie.overview}
+                            <span className="overview">Overview:</span>
+                            <span>{movie.overview}</span>
                         </div>
                         <div className="budget-revenue-container">
-                            <span className="budget">{movie.budget}</span>
-                            <span className={revenueClasses}>{movie.revenue}</span>
+                            <span> 
+                                <span>Budget:</span>
+                                <span className="budget">${movie.budget}</span>
+                            </span>
+                            <span>
+                                <span>Revenue: </span>
+                                <span className={revenueClasses.join(' ')}>${movie.revenue}</span>
+                            </span>
                         </div>
                     </div>
                 </div>
