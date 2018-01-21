@@ -1,0 +1,63 @@
+.search-movies-container {
+    position: relative;
+}
+
+.search-movies-container span {
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.search-movies-container input {
+    border: 1px solid #fff;
+    background-color: #ff424f;
+    border-radius: 4px;
+    height: 20px;
+    width: 150px;
+    padding-left: 5px;
+    color: #fff;
+}
+
+.search-movies-container input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff;
+}
+
+.search-movies-container input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+}
+
+.search-movies-container input:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+}
+
+.search-movies-container input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+}
+
+.search-movies-container .results-container {
+    position: absolute;
+    top: 100%;
+    left: calc(100% - 158px);
+    width: 158px;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    min-height: 100px;
+    background-color: #fff;
+    color: #000;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.search-movies-container .results-container.visible {
+    display: flex;
+}
+
+.search-movies-container .results-container.visible .content {
+    overflow: auto;
+    width: 100%;
+}
