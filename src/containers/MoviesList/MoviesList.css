@@ -12,3 +12,14 @@
     justify-content: space-between;
     margin-top: 20px;
 }
+
+.movies-list-container:after {
+    content: "";
+    flex: 0 1 320px;
+}
+
+@media screen and (max-width: 725px) {
+    .movies-list-container {
+        
+    }
+}
