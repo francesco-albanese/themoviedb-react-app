@@ -16,7 +16,7 @@ class GenreFilter extends Component {
             return <option key={genre.id} value={genre.id}>{genre.name}</option>
         }) : <option>No genres available</option>
         let genresSelect = (
-            <label>
+            <label className="genre-filter-container">
                 <span>Filter by genre:</span>
                 <select onChange={event => this.props.changed(event.target.value)} disabled={disabled}>
                     {options}

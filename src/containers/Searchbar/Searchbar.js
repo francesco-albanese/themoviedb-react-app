@@ -29,7 +29,9 @@ class Searchbar extends Component {
             result = movies.map(movie => {
                 return <MovieResult key={movie.id} {...movie} />
             })
-        } else {
+        }  
+        
+        if (this.query.length && !movies.length) {
             result = (
                 <div className="no-results">
                     No movies found
@@ -54,6 +56,7 @@ class Searchbar extends Component {
 }
 
 const mapStateToProps = state => {
+    console.log(state)
     return {
         movies: state.movieByQueryReducer.movies,
         error: state.movieByQueryReducer.error
