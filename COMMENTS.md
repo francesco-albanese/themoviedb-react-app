@@ -14,3 +14,8 @@
     I decided to go for the first approach to get more results each time the user filters by favourite genre.
 
 - I opted for axios to handle asynchrounous request instead of window.fetch for better cross-browser compatibility, although I could have included a polyfill
+
+- Folder structure: 
+    -- I created 4 sub folders inside src main folder: 
+        1) /assets contains the logo of TMDB
+        2)

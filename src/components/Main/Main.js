@@ -10,7 +10,7 @@ const Main = props => (
         <Switch>
             <Route path="/" exact component={MoviesList}/>
             <Route path="/movie/:id" exact component={MovieDetails} />
-            <Route path="*" component={RouteNotFound} />
+            <Route path="*" exact component={RouteNotFound} />
         </Switch>
     </main>
 )
