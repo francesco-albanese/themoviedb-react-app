@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import GlobalSpinner from '../../components/GlobalSpinner/GlobalSpinner'
 import * as actionCreators from '../../store/actions/actionCreators'
 import './MoviesList.css'
+import Auxiliary from '../../components/Auxiliary/Auxiliary'
 
 class MoviesList extends Component {
 
@@ -22,10 +23,27 @@ class MoviesList extends Component {
             )
         }
 
+        if (moviesList.length) {
+            content = (
+                <Auxiliary>
+                    <div className="genrefilter-container">
+                    
+                    </div>
+                    <div className="movies-list-container">
+                        { moviesList.map(movie => (
+                            <Movie key={movie.id} {...movie} />
+                        )) }
+                    </div>
+                </Auxiliary>
+            )
+        } else {
+            content = <GlobalSpinner />
+        }
+
         return (
-            <div>
+            <Auxiliary>
                 {content}
-            </div>
+            </Auxiliary>
         )
     }
 }
