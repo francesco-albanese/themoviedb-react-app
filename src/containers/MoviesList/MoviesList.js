@@ -5,6 +5,7 @@ import * as actionCreators from '../../store/actions/actionCreators'
 import './MoviesList.css'
 import Auxiliary from '../../components/Auxiliary/Auxiliary'
 import Movie from '../../components/Movie/Movie'
+import GenreFilter from '../GenreFilter/GenreFilter'
 
 class MoviesList extends Component {
 
@@ -28,7 +29,7 @@ class MoviesList extends Component {
             content = (
                 <Auxiliary>
                     <div className="genrefilter-container">
-                    
+                        <GenreFilter />
                     </div>
                     <div className="movies-list-container">
                         { moviesList.map(movie => (

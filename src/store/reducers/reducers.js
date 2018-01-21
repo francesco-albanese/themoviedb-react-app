@@ -47,10 +47,24 @@ const moviesListReducer = (state = moviesListInitialState, action) => {
     }
 }
 
+const allGenresInitialState = {
+    genres: [],
+    error: null
+}
+
+const allGenresReducer = (state = allGenresInitialState, action) => {
+    switch(action.type) {
+
+        default:
+            return state
+    }
+}
+
 
 const reducers = combineReducers({
     movieByQueryReducer,
-    moviesListReducer
+    moviesListReducer,
+    allGenresReducer
 })
 
 export default reducers 
