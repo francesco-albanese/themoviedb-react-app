@@ -24,9 +24,33 @@ const movieByQueryReducer = (state = movieByQueryDefaultState, action) => {
     }
 }
 
+const moviesListInitialState = {
+    movies: [],
+    error: null
+}
+
+const moviesListReducer = (state = moviesListInitialState, action) => {
+    switch(action.type) {
+        case actionTypes.FETCH_MOVIES:
+            return {
+                ...state,
+                movies: action.movies,
+                error: null
+            }
+        case actionTypes.FETCH_MOVIES_FAILS:
+            return {
+                ...state,
+                error: action.error
+            }
+        default:
+            return state
+    }
+}
+
 
 const reducers = combineReducers({
-    movieByQueryReducer
+    movieByQueryReducer,
+    moviesListReducer
 })
 
 export default reducers 

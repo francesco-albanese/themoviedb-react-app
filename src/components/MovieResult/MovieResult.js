@@ -4,7 +4,6 @@ import './MovieResult.css'
 import * as constants from '../../constants'
 
 const MovieResult = props => {
-    console.log(props)
     const src = props.poster_path ? constants.TMDB_IMG_URL + props.poster_path.replace(/\//, '') : "http://via.placeholder.com/50x50"
     return (
         <div className="movie-result-container">

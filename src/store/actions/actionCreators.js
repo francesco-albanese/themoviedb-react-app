@@ -23,3 +23,25 @@ export const fetchByQuery = query => {
             .catch(error => dispatch(getQueryFails(error)))
     }
 }
+
+export const getMovies = movies => {
+    return {
+        type: actionTypes.FETCH_MOVIES,
+        movies
+    }
+}
+
+export const fetchMoviesFailed = error => {
+    return {
+        type: actionTypes.FETCH_MOVIES_FAILS,
+        error
+    }
+}
+
+export const fetchMovies = () => {
+    return dispatch => {
+        axios.get(constants.TMDB_DEFAULT_URL)
+            .then(res => dispatch(getMovies(res.data.results)))
+            .catch(error => dispatch(fetchMoviesFailed(error)))
+    }
+}

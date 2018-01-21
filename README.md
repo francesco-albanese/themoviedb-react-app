@@ -20,3 +20,7 @@ This project consists of a responsive react web application which consumes [Them
 - react-router-dom to navigate to different routes of the application
 - redux and react-redux for state management
 - redux-thunk to handle asynchronous code in action creators
+
+## State management with Redux react-redux and redux-thunk
+
+
