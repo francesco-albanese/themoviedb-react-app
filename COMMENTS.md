@@ -18,4 +18,7 @@
 - Folder structure: 
     -- I created 4 sub folders inside src main folder: 
         1) /assets contains the logo of TMDB
-        2)
+        2) containers which contains all the stateful components
+        3) components contains just presentational components
+        4) /store contains /actions and /reducers; actions is divided into actionCreators and actionTypes
+    I decided to export default constants as actionTypes to prevent typos
