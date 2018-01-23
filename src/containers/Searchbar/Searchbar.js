@@ -17,7 +17,6 @@ class Searchbar extends Component {
     handleClick = () => {
         ReactDOM.findDOMNode(this.refs.input).value = "";
         ReactDOM.findDOMNode(this.refs.resultsContainer).classList.remove('visible')
-        console.log(this.props)
         if (this.props.location.pathname.test(/movie/)) {
             let id = this.props.location.pathname.match(/\d+/)[0]
             actionCreators.fetchMovie(id)
