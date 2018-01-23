@@ -23,15 +23,14 @@ This project consists of a responsive react web application which consumes [Them
 
 ## State management with Redux react-redux and redux-thunk
 
-In this project I am using Redux and react-redux to controlling the flow of data making sure all the components update accordingly having access to a global store.
+In this project I am using Redux and react-redux to control the flow of data making sure all the components update accordingly having access to a global store.
 Redux makes easier to handle the global state, creating a central store which encapsulate all the states of the application.
 
-I created action types constants to describe the type of action which I wanted to execute with the action creator function. Thanks to redux-thunk middleware I managed to dispatch actions asynchronously, fetching data from TMDB Apis and consequently let the reducer handle the data transformation (is needed) and update the store.
+I created action types constants to describe the type of action which I wanted to execute with the action creator function. Thanks to redux-thunk middleware I managed to dispatch actions asynchronously, fetching data from TMDB Apis and consequently let the reducer handle the data transformation (if needed) and update the store.
 
 Since the reducers are responsible for updating the store, I decided to put data transformation logic inside the reducers rather than in the actions.
 
-Here's my data flow: a component dispatch an action with an action creator function, the actionCreator fetches data from the server and send it to the reducer. The reducer at that point is responsible to update the store and through the "connect" function of redux I am hooking up the component itself to the global state, making sure to receive the data as props. 
+Here's my data flow: a component dispatches an action with an action creator function, the actionCreator fetches data from the server and send it to the reducer. The reducer at that point is responsible to update the store and through the "connect" function of redux I am hooking up the component itself to the global state,making sure to receive the data as props. 
 
-I also made sure to update the store immutably, return every time a brand new javascript object with the old state properties and the updated ones.
-
+I also made sure to update the store immutably, returning every time a brand new javascript object with the old state properties and the updated ones.
 
